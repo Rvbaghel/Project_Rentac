@@ -1,0 +1,95 @@
+/* src/Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #65a2c7;
+    padding: 1rem;
+    color: rgb(245, 246, 248);
+    
+}
+
+.nav-logo svg, .nav-icons .icon {
+    transition: transform 0.3s ease;
+}
+
+.nav-icons {
+    display: flex;
+}
+
+.icon {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+/* Hover Effect */
+.nav-logo svg:hover, .nav-icons .icon:hover {
+    color: rgb(231, 245, 189); /* Change icon color on hover */
+    transform: scale(1.1); /* Slightly increase the icon size */
+}
+
+/* Animation effect for icons */
+@keyframes rotateAndScale {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2) rotate(180deg);
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+.nav-icons .icon:hover {
+    animation: rotateAndScale 0.6s ease-in-out forwards;
+    
+}
+
+.icon-container {
+    position: relative;
+    display: inline-block;
+}
+
+.user-card {
+    position: absolute;
+    width: 200px;
+    right: 0;
+    top: 100%; /* Show just below the icon */
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 10px;
+    border-radius: 5px;
+    display: none; /* Initially hide */
+    flex-direction: column;
+}
+
+.icon-container:hover .user-card {
+    display: flex; /* Show on hover */
+}
+
+.user-card a {
+    color: #333;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.user-card a:hover {
+    
+    text-decoration: underline;
+}
+
+.event-image {
+    width: 2.9em; /* Set the width to match the size of the home icon */
+    height: 2.9em; /* Set the height to match the size of the home icon */
+    margin-left: 45px; /* Add a margin to separate the event image from the home icon */
+    cursor: pointer; /* Add cursor pointer for clickable behavior */
+    transition: transform 0.3s ease; /* Add transition for smooth animation */
+}
+
+/* Apply scale animation on hover */
+.event-image:hover {
+    border-radius: 3px;
+    background-color: rgb(223, 231, 244);
+    transform: scale(1.2); /* Slightly increase the size on hover */
+}

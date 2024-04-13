@@ -1,0 +1,44 @@
+.categories {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  padding-bottom: 90px;
+}
+
+.category {
+  position: relative;
+   overflow: hidden; 
+  cursor: pointer;
+  width: 3.9em; /* Adjust width as needed */
+  height: 3.9em; /* Adjust height as needed */
+  margin-right: 90px; /* Add margin between categories */
+}
+
+.category:last-child {
+  margin-right: 1; /* Remove margin from the last category to prevent extra space */
+}
+
+.category img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.category:hover img {
+  transform: scale(1.0);
+}
+
+.category::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.category:hover::after {
+  opacity: 1;
+}

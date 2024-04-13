@@ -1,0 +1,44 @@
+.chair-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .filter {
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+  
+  .filter-label {
+    font-weight: bold;
+    margin-right: 20px;
+  }
+  
+  .dropdown {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  
+  .dropdown-label {
+    margin-right: 5px;
+  }
+  
+  .dropdown-icon {
+    margin-left: 5px;
+  }
+  
+  .options {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    font-style: italic;
+  }
+  
+  .options-icon {
+    margin-left: 5px;
+  }
+  
